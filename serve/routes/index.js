@@ -103,4 +103,24 @@ router.get('/logData', function (req, res, next) {
     })
   }, 2000)
 });
+
+router.get('/getNavData', function (req, res, next) {
+  const list = require('../data/navData');
+  res.json({
+    list
+  })
+});
+
+router.get('/getAisData', function (req, res, next) {
+  const obj = require('../data/aisData');
+  res.json({
+    obj
+  })
+});
+router.get('/getNavType', function (req, res, next) {
+  const obj = require('../data/navType');
+  res.json({
+    obj
+  })
+});
 module.exports = router;
