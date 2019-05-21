@@ -1,26 +1,12 @@
-module.exports = [
-    {
-        id: 1,
-        date: "2016-05-03 09:00:23",
-        name1: "王小虎",
-        company1: "王小虎1",
-        name2: "王小虎",
-        company2: "王小虎1",
-        msgType: "未知",
-        contantCnt: "123",
-        dealStatus: "上海市普陀区金沙江路 1518 弄",
-        weather: "12312313"
-    },
-    {
-        id: 2,
-        date: "2016-05-03 09:00:23",
-        name1: "王大虎",
-        company1: "王大虎1",
-        name2: "王大虎",
-        company2: "王大虎1",
-        msgType: "未知",
-        contantCnt: "321",
-        dealStatus: "深圳市普陀区金沙江路 1518 弄",
-        weather: "123132"
-    }
-]
+module.exports = [{
+    "answerCallName": "刘德华", // 来电姓名
+    "answerCallOrgan": "英皇娱乐", // 来电机构
+    "dialeCallName": "l", // 去电姓名
+    "dialeCallOrgan": "2", // 去电机构
+    "extraFile": "", // 附件
+    "happendTime": "2019-05-14 13:30:20", // 发生时间
+    "msgType": "0", // 信息类型，0 日常信息 1 接班信息 2 交班信息
+    "primaryKey": "44", // 所属日志记录ID
+    "result": "不舍得挂断", // 处理结果
+    "workDescription": "奖门人娱乐环节" // 工作描述
+}]

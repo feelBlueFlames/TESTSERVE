@@ -3,16 +3,26 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', {
+    title: 'Express'
+  });
 });
 router.get('/logData', function (req, res, next) {
   const list = require('../data/dutyLog');
   setTimeout(() => {
     res.json({
       code: 1,
-      data: {
-        list
-      },
+      data: list,
+      msg: 'success'
+    })
+  }, 2000)
+});
+router.post('/duty/findDutyLogByPage', function (req, res, next) {
+  const list = require('../data/dutyList');
+  setTimeout(() => {
+    res.json({
+      code: "200",
+      data: list,
       msg: 'success'
     })
   }, 2000)
@@ -68,25 +78,26 @@ router.get('/getTyphoonData', function (req, res, next) {
       code: 1,
       msg: 'success',
       data: [{
-        title: "玉兔",
-        name: "1",
-        content: "12313"
-      },
-      {
-        title: "康妮",
-        name: "2",
-        content: "12313"
-      },
-      {
-        title: "玉兔",
-        name: "3",
-        content: "12313"
-      },
-      {
-        title: "百里嘉",
-        name: "4",
-        content: "12313"
-      }]
+          title: "玉兔",
+          name: "1",
+          content: "12313"
+        },
+        {
+          title: "康妮",
+          name: "2",
+          content: "12313"
+        },
+        {
+          title: "玉兔",
+          name: "3",
+          content: "12313"
+        },
+        {
+          title: "百里嘉",
+          name: "4",
+          content: "12313"
+        }
+      ]
     })
   }, 1000)
 
@@ -121,6 +132,17 @@ router.get('/getNavType', function (req, res, next) {
   const obj = require('../data/navType');
   res.json({
     obj
+  })
+});
+
+router.get('/accountSet', function (req, res, next) {
+  res.json({
+    code: 1
+  })
+});
+router.post('/login', function (req, res, next) {
+  res.json({
+    code: 1
   })
 });
 module.exports = router;
