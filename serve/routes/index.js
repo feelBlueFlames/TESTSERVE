@@ -114,6 +114,18 @@ router.get('/logData', function (req, res, next) {
     })
   }, 2000)
 });
+router.get('/msa/MSAOSB-APPClient/MSAosb/MSAosb/logData', function (req, res, next) {
+  const list = require('../data/typhoon');
+  setTimeout(() => {
+    res.json({
+      code: 1,
+      data: {
+        list
+      },
+      msg: 'success'
+    })
+  }, 2000)
+});
 
 router.get('/getNavData', function (req, res, next) {
   const list = require('../data/navData');
@@ -128,7 +140,7 @@ router.get('/getAisData', function (req, res, next) {
     obj
   })
 });
-router.get('/getNavType', function (req, res, next) {
+router.post('/getNavType', function (req, res, next) {
   const obj = require('../data/navType');
   res.json({
     obj
@@ -145,4 +157,14 @@ router.post('/login', function (req, res, next) {
     code: 1
   })
 });
+router.get('/jsonTest', function (req, res, next) {
+  res.send(JSON.stringify({
+    code: 1,
+    datas: {
+      list: [{cctvid:'12'}, {}],
+      total: 12
+    }
+  }))
+});
+
 module.exports = router;
