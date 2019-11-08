@@ -8,3 +8,5 @@ release_test1.1.0_1108 bug fix
 hotfix_test1.1.0_1108 bug fix
 others staff amend record
 
+test-branch record
+
