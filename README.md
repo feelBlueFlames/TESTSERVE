@@ -15,3 +15,5 @@ squash test
 squash test1
 
 squash test2
+
+rebase test1
