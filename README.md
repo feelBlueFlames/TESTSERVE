@@ -13,3 +13,5 @@ test-branch record
 squash test
 
 squash test1
+
+squash test2
