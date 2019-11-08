@@ -10,3 +10,4 @@ others staff amend record
 
 test-branch record
 
+squash test
